@@ -56,7 +56,7 @@ def submit():
     if req.status_code == 200:
         res = json.loads(req.text)
         print('result =', res['result'], '; time =', res['time'])
-        return render_template('result.html'), 200
+        return render_template('result.html', result=res['result']), 200
     else:
         return 'Local Server Error!', 500
 
