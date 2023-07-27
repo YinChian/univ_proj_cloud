@@ -40,7 +40,6 @@ $('submit-img').addEventListener('click', async () => {
 
     const canvas_data = (await resizeImageData(ctx.getImageData(0, 0, canvas.width, canvas.height), res_width, res_height));
 
-    // alert('line 42')
 
     // == ColorFul Image Start ==
     
@@ -74,12 +73,9 @@ $('submit-img').addEventListener('click', async () => {
 
     }
 
-    // alert('line 77')
-    // console.log(gray);
 
     gray = await padding(gray, res_width, res_height);
 
-    // console.log(gray);
 
     const formData = new FormData();
     formData.append('gray_img', gray);
@@ -88,7 +84,6 @@ $('submit-img').addEventListener('click', async () => {
 
     // == GrayScale Image End ==
 
-    // alert('line 88')
 
     // post form data
     const xhr = new XMLHttpRequest();
@@ -106,7 +101,6 @@ $('submit-img').addEventListener('click', async () => {
 
     xhr.onload = () => {
       if(xhr.status == 200){
-        // alert('成功跳轉')
         document.documentElement.innerHTML = xhr.responseText;
 
       }else{
