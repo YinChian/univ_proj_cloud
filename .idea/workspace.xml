@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c613f5e9-3475-44ed-bb9d-eabc21dabb29" name="Changes" comment="與JinJa模板引擎結合">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +103,7 @@
       <workItem from="1690422641187" duration="248000" />
       <workItem from="1690424058177" duration="1745000" />
       <workItem from="1690470949171" duration="171000" />
+      <workItem from="1690718575502" duration="1831000" />
     </task>
     <task id="LOCAL-00001" summary="Web basic function DONE!">
       <created>1690239900789</created>
