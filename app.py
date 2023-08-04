@@ -42,9 +42,9 @@ def intro():
 def submit():
     form_data = request.form['gray_img']
     # gray_img = list(map(int, form_data.split(',')))
-    print(len(form_data))
-    if len(form_data) != 958:
-        return "長度不符合標準", 400
+    # print(len(form_data))
+    # if len(form_data) != 958:
+    #     return "長度不符合標準", 400
 
     print(form_data)
 
