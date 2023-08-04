@@ -194,11 +194,11 @@ async function padding(imageArray, width, height) {
 
   for(let i = 0; i < width + 2; i += 1){
     ret += 1 - i % 2;
-
     ret += ' '
-
   }
-  // ret += '\n';
+  
+  ret = ret.substring(0, ret.length - 1);
+  ret += '\n';
 
   // ret += ' ';
   for(let i = 0; i < width; i += 1){
@@ -212,8 +212,8 @@ async function padding(imageArray, width, height) {
       ret += ' ';
     }
     ret += 1 - i % 2;
-    // ret += '\n';
-    ret += ' ';
+    ret += '\n';
+    // ret += ' ';
   }
   for(let i = 0; i < width + 2; i += 1){
     ret += i % 2;
