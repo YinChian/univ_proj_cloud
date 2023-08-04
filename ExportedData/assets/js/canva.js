@@ -200,7 +200,7 @@ async function padding(imageArray, width, height) {
   }
   // ret += '\n';
 
-  ret += ' ';
+  // ret += ' ';
   for(let i = 0; i < width; i += 1){
     ret += i % 2;
 
