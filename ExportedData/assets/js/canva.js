@@ -219,5 +219,6 @@ async function padding(imageArray, width, height) {
     ret += i % 2;
     ret += ' ';
   }
+  ret = ret.substring(0, ret.length - 1);
   return ret;
 }

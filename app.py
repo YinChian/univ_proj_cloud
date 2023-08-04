@@ -41,19 +41,19 @@ def intro():
 @cross_origin()
 def submit():
     form_data = request.form['gray_img']
-    # gray_img = list(map(int, form_data.split(',')))
+    gray_img = list(map(int, form_data.split(' ')))
     # print(len(form_data))
     # if len(form_data) != 958:
     #     return "長度不符合標準", 400
 
-    print(form_data)
+    print(gray_img)
 
     # Simulate Super Long Runtime Function (3sec)
     # time.sleep(3)
 
-    req = requests.post(url='http://home-vpn.yinchian.com:8000', json={'data': form_data})
+    # req = requests.post(url='http://home-vpn.yinchian.com:8000', json={'data': gray_img})
 
-    # req = requests.post(url='http://127.0.0.1:8000/', json={'data': form_data})
+    req = requests.post(url='http://127.0.0.1:8000/', json={'data': gray_img})
 
     if req.status_code == 200:
         res = json.loads(req.text)
