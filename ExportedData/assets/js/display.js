@@ -24,7 +24,7 @@ window.addEventListener('load', (e) => {
     }
 
     prob.sort(function(a, b){return a-b});
-    if((prob[prob.length - 1] / prob[prob.length - 1]) > 10){
+    if((prob[prob.length - 1] / prob[prob.length - 2]) > 10){
         chart.options.scales.yAxes[0].type = 'logarithmic';
         chart.options.scales.yAxes[0].display = false;
         $('info-text').innerHTML += '<br><strong>由於資料差距過大，此表以對數刻度表示y軸。</strong>';
