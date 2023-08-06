@@ -55,7 +55,7 @@ def submit():
     # Simulate Super Long Runtime Function (3sec)
     # time.sleep(3)
 
-    req = requests.post(url='http://home-vpn.yinchian.com:8000', json={'data': ret})
+    req = requests.post(url='http://rasbpi.yinchian.com:8000', json={'data': ret})
 
     # req = requests.post(url='http://127.0.0.1:8000/', json={'data': ret})
 
