@@ -105,6 +105,7 @@ $('submit-img').addEventListener('click', async () => {
       if(xhr.status == 200){
         // document.documentElement.innerHTML = xhr.responseText;
         localStorage.setItem('prevData', xhr.responseText);
+        hideLoadingScreen();
         window.location.href = '/result.html';
 
       }else{

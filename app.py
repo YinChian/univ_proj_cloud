@@ -71,7 +71,7 @@ def submit():
 
         return res, 200
     else:
-        return '本地端PYNQ有問題', 500
+        return 'PYNQ連線失敗', 500
 
 
 if __name__ == '__main__':
