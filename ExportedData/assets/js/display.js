@@ -10,10 +10,10 @@ var g = function(data){
 var prev_result = g('prevData');
 
 $('show-result').innerHTML = prev_result.result;
-$('time-col1').innerHTML = Math.floor(prev_result.total_time * 10e6) / 10e3 + 'ms';
-$('time-col2').innerHTML = Math.floor(prev_result.data_prep_time * 10e6) / 10e3 + 'ms';
-$('time-col3').innerHTML = Math.floor(prev_result.conv_time * 10e6) / 10e3 + 'ms';
-$('time-col4').innerHTML = Math.floor(prev_result.pool_time * 10e6) / 10e3 + 'ms';
+$('time-col1').innerHTML = Math.round(prev_result.total_time * 10e5) / 10e2 + 'ms';
+$('time-col2').innerHTML = Math.round(prev_result.data_prep_time * 10e5) / 10e2 + 'ms';
+$('time-col3').innerHTML = Math.round(prev_result.conv_time * 10e5) / 10e2 + 'ms';
+$('time-col4').innerHTML = Math.round(prev_result.pool_time * 10e5) / 10e2 + 'ms';
 
 window.addEventListener('load', (e) => {
     var prob = prev_result.probability_arr;
@@ -28,6 +28,8 @@ window.addEventListener('load', (e) => {
         chart.options.scales.yAxes[0].type = 'logarithmic';
         chart.options.scales.yAxes[0].display = false;
         $('info-text').innerHTML += '<br><strong>由於資料差距過大，此表以對數刻度表示y軸。</strong>';
+    }else{
+        $('info-text').innerHTML += '<br>前兩筆資料差距不大，未使用對數刻度表示y軸';
     }
     chart.update();
 });
