@@ -21,7 +21,7 @@ const f_canvas = new fabric.Canvas('demoCanvas', {
 if(f_canvas.freeDrawingBrush){
   var brush = f_canvas.freeDrawingBrush;
   // brush.width = canvas_size / 28;
-  brush.width = 15;
+  brush.width = 10;
   brush.color = 'black';
 }else{
   alert('您的瀏覽器不被支援');
@@ -113,7 +113,7 @@ $('submit-img').addEventListener('click', async () => {
       // gray.push(Math.round(0.299 * canvas_data.data[i] + 0.587 * canvas_data.data[i+1] + 0.114 *canvas_data.data[i+2])); 
       
       // Binary
-      gray.push((0.299 * canvas_data.data[i] + 0.587 * canvas_data.data[i+1] + 0.114 *canvas_data.data[i+2]) > 128 ? 0 : 1); 
+      gray.push((0.299 * canvas_data.data[i] + 0.587 * canvas_data.data[i+1] + 0.114 *canvas_data.data[i+2]) > 50 ? 0 : 1); 
       // gray.push(' ');
 
     }
@@ -223,7 +223,7 @@ function hideLoadingScreen(){
   document.body.style.setProperty('overflow', 'unset');
 }
 
-// async function resizeImageData (imageData, width, height) {
+// async function resizeImageData (f_canvas, imageData, width, height) {
 //   const resizeWidth = width >> 0
 //   const resizeHeight = height >> 0
 //   const ibm = await window.createImageBitmap(imageData, 0, 0, imageData.width, imageData.height, {
@@ -244,7 +244,9 @@ async function resizeImageData (f_canvas, imageData, width, height, limits) {
   _canvas.width = resizeWidth;
   _canvas.height = resizeHeight;
   const _ctx = _canvas.getContext('2d');
-  _ctx.drawImage(f_canvas, limits[0], limits[1], limits[2], limits[3], 0, 0, resizeWidth, resizeHeight);
+  _ctx.fillStyle = 'white';
+  _ctx.fillRect(0, 0, resizeWidth, resizeHeight);
+  _ctx.drawImage(f_canvas, limits[0], limits[1], limits[2], limits[3], 1, 1, resizeWidth - 1, resizeHeight - 1);
   return _ctx.getImageData(0, 0, resizeWidth, resizeHeight);
 }
 
