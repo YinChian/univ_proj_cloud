@@ -20,8 +20,8 @@ const f_canvas = new fabric.Canvas('demoCanvas', {
 
 if(f_canvas.freeDrawingBrush){
   var brush = f_canvas.freeDrawingBrush;
-  // brush.width = canvas_size / 28;
-  brush.width = 10;
+  brush.width = canvas_size / 28;
+  // brush.width = 10;
   brush.color = 'black';
 }else{
   alert('您的瀏覽器不被支援');
