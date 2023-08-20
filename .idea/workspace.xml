@@ -111,7 +111,11 @@
       <workItem from="1691304121885" duration="625000" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1691336306245" duration="9619000" />
+=======
+      <workItem from="1691336306245" duration="8802000" />
+>>>>>>> parent of c9f81dd (Add some final touch)
 =======
       <workItem from="1691336306245" duration="8802000" />
 >>>>>>> parent of c9f81dd (Add some final touch)
@@ -191,6 +195,7 @@
     </task>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <task id="LOCAL-00011" summary="Add some final touch">
       <created>1691359914136</created>
       <option name="number" value="00011" />
@@ -206,6 +211,9 @@
       <updated>1691359961764</updated>
     </task>
     <option name="localTasksCounter" value="13" />
+=======
+    <option name="localTasksCounter" value="11" />
+>>>>>>> parent of c9f81dd (Add some final touch)
 =======
     <option name="localTasksCounter" value="11" />
 >>>>>>> parent of c9f81dd (Add some final touch)
