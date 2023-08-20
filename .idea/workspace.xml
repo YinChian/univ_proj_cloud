@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c613f5e9-3475-44ed-bb9d-eabc21dabb29" name="Changes" comment="Add some final touch" />
+    <list default="true" id="c613f5e9-3475-44ed-bb9d-eabc21dabb29" name="Changes" comment="Add some final touch">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +109,11 @@
       <workItem from="1691130557856" duration="3942000" />
       <workItem from="1691136728704" duration="2092000" />
       <workItem from="1691304121885" duration="625000" />
+<<<<<<< HEAD
       <workItem from="1691336306245" duration="9619000" />
+=======
+      <workItem from="1691336306245" duration="8802000" />
+>>>>>>> parent of c9f81dd (Add some final touch)
     </task>
     <task id="LOCAL-00001" summary="Web basic function DONE!">
       <created>1690239900789</created>
@@ -178,6 +185,7 @@
       <option name="project" value="LOCAL" />
       <updated>1691359247931</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00011" summary="Add some final touch">
       <created>1691359914136</created>
       <option name="number" value="00011" />
@@ -193,6 +201,9 @@
       <updated>1691359961764</updated>
     </task>
     <option name="localTasksCounter" value="13" />
+=======
+    <option name="localTasksCounter" value="11" />
+>>>>>>> parent of c9f81dd (Add some final touch)
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
