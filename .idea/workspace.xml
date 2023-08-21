@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c613f5e9-3475-44ed-bb9d-eabc21dabb29" name="Changes" comment="Add some final touch">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +110,7 @@
       <workItem from="1691304121885" duration="625000" />
       <workItem from="1691336306245" duration="8802000" />
       <workItem from="1692535784664" duration="849000" />
+      <workItem from="1692605538114" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="Web basic function DONE!">
       <created>1690239900789</created>
