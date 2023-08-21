@@ -27,7 +27,7 @@ def demo():
 
 @app.route('/demo-camera')
 @app.route('/demo-camera.html')
-def demo():
+def demo_cam():
     return render_template('demo-camera.html')
 
 
