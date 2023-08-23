@@ -65,7 +65,7 @@ def submit():
     if platform.platform() == 'Windows-10-10.0.22621-SP0':
         req = requests.post(url='http://127.0.0.1:8000/', json={'data': ret})
     else:
-        req = requests.post(url='http://rasbpi.yinchian.com:8000', json={'data': ret})
+        req = requests.post(url='https://rasbpi.yinchian.com:8000', json={'data': ret})
 
     if req.status_code == 200:
         res = json.loads(req.text)
