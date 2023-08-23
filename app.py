@@ -18,11 +18,16 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/select')
+@app.route('/select.html')
+def show_select():
+    return render_template('select.html')
+
+
 @app.route('/demo')
 @app.route('/demo.html')
 def demo():
     return render_template('demo.html')
-
 
 
 @app.route('/demo-camera')
@@ -35,6 +40,12 @@ def demo_cam():
 @app.route('/demo-continuous.html')
 def demo_continuous():
     return render_template('demo-continuous.html')
+
+
+@app.route('/demo-camera-continous')
+@app.route('/demo-camera-continous.html')
+def demo_camera_continous():
+    return render_template('demo-camera-continous.html')
 
 
 @app.route('/result.html')
