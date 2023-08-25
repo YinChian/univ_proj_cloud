@@ -38,6 +38,9 @@ window.onload = () => {
     filter_ctx.stroke();
 }
 
+$('camera').addEventListener('canplay', () => {
+    if(Socket.readyState == 1) isReady = true;
+})
 
 const constraints = {
     video: {
@@ -59,7 +62,6 @@ function init_camera() {
         .then((stream) => {
             video.srcObject = stream;
             video.play();
-            isReady = true;
             frame();
         })
         .catch((err) => {
@@ -73,9 +75,7 @@ function init_camera() {
 const url = "wss://rasbpi.yinchian.com:8000/ws-api";
 // const url = "ws://127.0.0.1:8000/ws-api";
 var Socket = new WebSocket(url);
-// Socket.onopen = () => {
-//     isReady = true;
-// }
+$('camera').addEventListener('play')
 
 Socket.onmessage = (e) => {
     let prev_result = JSON.parse(e.data);
