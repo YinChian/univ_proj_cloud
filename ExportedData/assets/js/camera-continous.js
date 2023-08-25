@@ -108,16 +108,16 @@ const grayer = (imageData, threshold) => {
 
 }
 
-function frame() {
+async function frame() {
 
     if (camera.paused || camera.ended) return;
 
-    ctx.drawImage(camera, 0, 0, canva.width, canva.height);
+    await ctx.drawImage(camera, 0, 0, canva.width, canva.height);
 
-    let imageData = ctx.getImageData(0, 0, canva.width, canva.height);
+    let imageData = await ctx.getImageData(0, 0, canva.width, canva.height);
 
     // OTSU演算法取閥值
-    const threshold = calc_thresh(imageData.data);
+    const threshold = await calc_thresh(imageData.data);
 
     // 套用新值
     // black_white = [];
@@ -129,7 +129,7 @@ function frame() {
     //     black_white.push(tmp);
     // }
 
-    imageData = grayer(imageData, threshold);
+    imageData = await grayer(imageData, threshold);
 
     // 顯示！
     ctx.putImageData(imageData, 0, 0);
