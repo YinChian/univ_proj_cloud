@@ -59,6 +59,7 @@ function init_camera() {
         .then((stream) => {
             video.srcObject = stream;
             video.play();
+            isReady = true;
             frame();
         })
         .catch((err) => {
@@ -72,9 +73,9 @@ function init_camera() {
 const url = "wss://rasbpi.yinchian.com:8000/ws-api";
 // const url = "ws://127.0.0.1:8000/ws-api";
 var Socket = new WebSocket(url);
-Socket.onopen = () => {
-    isReady = true;
-}
+// Socket.onopen = () => {
+//     isReady = true;
+// }
 
 Socket.onmessage = (e) => {
     let prev_result = JSON.parse(e.data);
