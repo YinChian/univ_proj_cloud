@@ -83,20 +83,31 @@ Socket.onmessage = (e) => {
 }
 
 const grayer = (imageData, threshold) => {
-    return new Promise((res) => {
-        black_white = [];
-        for (let i = 0; i < imageData.data.length; i += 4) {
-            let tmp = (0.299 * imageData.data[i] + 0.587 * imageData.data[i + 1] + 0.114 * imageData.data[i + 2]) < threshold;
-            imageData.data[i] = (!tmp) * 255;
-            imageData.data[i + 1] = (!tmp) * 255;
-            imageData.data[i + 2] = (!tmp) * 255;
-            black_white.push(tmp);
-        }
-        res(imageData);
-    });
+    // return new Promise((res) => {
+    //     black_white = [];
+    //     for (let i = 0; i < imageData.data.length; i += 4) {
+    //         let tmp = (0.299 * imageData.data[i] + 0.587 * imageData.data[i + 1] + 0.114 * imageData.data[i + 2]) < threshold;
+    //         imageData.data[i] = (!tmp) * 255;
+    //         imageData.data[i + 1] = (!tmp) * 255;
+    //         imageData.data[i + 2] = (!tmp) * 255;
+    //         black_white.push(tmp);
+    //     }
+    //     res(imageData);
+    // });
+
+    black_white = [];
+    for (let i = 0; i < imageData.data.length; i += 4) {
+        let tmp = (0.299 * imageData.data[i] + 0.587 * imageData.data[i + 1] + 0.114 * imageData.data[i + 2]) < threshold;
+        imageData.data[i] = (!tmp) * 255;
+        imageData.data[i + 1] = (!tmp) * 255;
+        imageData.data[i + 2] = (!tmp) * 255;
+        black_white.push(tmp);
+    }
+    return imageData;
+
 }
 
-async function frame() {
+function frame() {
 
     if (camera.paused || camera.ended) return;
 
@@ -117,16 +128,18 @@ async function frame() {
     //     black_white.push(tmp);
     // }
 
-    imageData = await grayer(imageData, threshold);
+    imageData = grayer(imageData, threshold);
 
     // 顯示！
     ctx.putImageData(imageData, 0, 0);
 
-    if(isReady){
+    if (isReady) {
         isReady = false;
         // Do Something
-        ret = await image_prep();
-        Socket.send(JSON.stringify({"data": ret}));
+        image_prep().then((r) => {
+            Socket.send(JSON.stringify({ "data": r }));
+        });
+        
     }
 
     requestAnimationFrame(frame);
