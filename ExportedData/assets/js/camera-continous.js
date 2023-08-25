@@ -101,7 +101,7 @@ const grayer = (imageData, threshold) => {
         imageData.data[i] = (!tmp) * 255;
         imageData.data[i + 1] = (!tmp) * 255;
         imageData.data[i + 2] = (!tmp) * 255;
-        black_white.push(tmp);
+        black_white.push(tmp * 1);
     }
     return imageData;
 
