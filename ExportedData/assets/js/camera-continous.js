@@ -138,7 +138,7 @@ async function frame() {
         isReady = false;
         // Do Something
         image_prep().then((r) => {
-            console.log(r);
+            console.log('Send> ', r);
             Socket.send(JSON.stringify({ "data": r }));
         });
         

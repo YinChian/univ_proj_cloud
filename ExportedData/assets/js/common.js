@@ -171,10 +171,10 @@ function BilinearInterpolation(imageData, res_x, res_y, orig_xl, orig_yl, orig_x
     }
   }
   // sleep(1000);
-  return new Promise((res) => {
-    res(ret);
-  });
-  // return ret;
+  // return new Promise((res) => {
+  //   res(ret);
+  // });
+  return ret;
 }
 
 // Testing
